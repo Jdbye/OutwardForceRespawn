@@ -1,0 +1,9 @@
+{
+    "name": "ForceRespawn",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Jdbye/OutwardForceRespawn",
+    "description": "Enables respawning (map reload) from the pause menu, as well as fixing a rare inventory stack bug.",
+    "dependencies": [
+        "BepInEx-BepInExPack_Outward-5.4.19"
+    ]
+}
