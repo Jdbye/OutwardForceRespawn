@@ -14,6 +14,8 @@ But it can still occur on DE, as I have been personally encountering it nearly e
 A new menu option is added to the pause menu, which allows you to respawn (reload the map) at will.
 The spawn point can be configured from the BepInEx configuration manager.
 
+The respawn function acts similarly to sleeping, but without affecting your buffs or stats or passing time.
+
 The stack bug fix included in this plugin simply force reloads the map on join.
 This reload happens for all connected players, for that reason I don't recommend enabling it unless you actually encounter this bug.
 If you want to enable it, you can do so in the configuration manager.
