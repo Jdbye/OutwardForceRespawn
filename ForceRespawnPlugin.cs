@@ -23,7 +23,7 @@ namespace ForceRespawn
     public class ForceRespawnPlugin : BaseUnityPlugin
     {
         public const string NAME = "ForceRespawn";
-        public const string VERSION = "1.0.0";
+        public const string VERSION = "1.1.0";
         public const string CREATOR = "Jdbye";
         public const string GUID = CREATOR + NAME;
 
@@ -109,9 +109,9 @@ namespace ForceRespawn
         internal static IEnumerator ReloadMap(SpawnSelectionTypes? spawnType = null)
         {
             if (spawnType == null) spawnType = SpawnType.Value;
-#if DEBUG
+
             Log.LogInfo($"Forcing respawn ({spawnType.GetDescription()}) - {AreaManager.Instance.CurrentArea.SceneName} - {AreaManager.Instance.CurrentArea.MapResourcesName}");
-#endif
+
             // Get the spawn point index for the selected spawn type
             int spawnIndex = GetSpawnIndex((SpawnSelectionTypes)spawnType);
             // Get the current scene name, we will use this later
@@ -209,18 +209,14 @@ namespace ForceRespawn
                 var curChar = CharacterManager.Instance.GetCharacter(player);
                 if (playerPositions.ContainsKey(player) && playerRotations.ContainsKey(player))
                 {
-#if DEBUG
-                    Log.LogInfo($"Teleporting character '{curChar.Name}' ({player}) to {playerPositions[player]}");
-#endif
+                    Log.LogDebug($"Teleporting character '{curChar.Name}' ({player}) to {playerPositions[player]}");
                     curChar.Teleport(playerPositions[player], playerRotations[player]);
                     if (curChar.CharacterCamera != null) curChar.CharacterCamera.ResetCameraToPlayer();
                 }
-#if DEBUG
                 else
                 {
-                    Log.LogInfo($"Not teleporting character '{curChar.Name}' ({player}) because their position is not stored");
+                    Log.LogDebug($"Not teleporting character '{curChar.Name}' ({player}) because their position is not stored");
                 }
-#endif
             }
         }
     }

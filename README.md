@@ -9,6 +9,8 @@ The bugged state is fixed by reloading the map (by resting, or moving to another
 This bug seems to be rare, as the last report I could find on Google was from 2020, before Definitive Edition was even released.
 But it can still occur on DE, as I have been personally encountering it nearly every time I join a game on one of my characters. It seems to be tied to a specific character.
 
+Available on Thunderstore: https://thunderstore.io/c/outward/p/Jdbye/ForceRespawn/
+
 ## What it does
 
 A new menu option is added to the pause menu, which allows you to respawn (reload the map) at will.

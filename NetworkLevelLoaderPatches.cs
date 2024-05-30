@@ -31,9 +31,7 @@ namespace ForceRespawn
             catch (Exception e)
             {
                 ForceRespawnPlugin.Log.LogError($"NetworkLevelLoader.OnJoinedRoom Postfix failed! ({e.GetType()}): {e.Message}");
-#if DEBUG
-                ForceRespawnPlugin.Log.LogError($"Stack trace: {e.StackTrace}");
-#endif
+                ForceRespawnPlugin.Log.LogDebug($"Stack trace: {e.StackTrace}");
             }
         }
     }

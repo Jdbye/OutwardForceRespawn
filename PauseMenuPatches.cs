@@ -51,9 +51,7 @@ namespace ForceRespawn
             catch (Exception e)
             {
                 ForceRespawnPlugin.Log.LogError($"Failed to patch PauseMenu UI for player {__instance.CharacterUI.TargetCharacter.Name} ({e.GetType()}): {e.Message}");
-#if DEBUG
-                ForceRespawnPlugin.Log.LogError($"Stack trace: {e.StackTrace}");
-#endif
+                ForceRespawnPlugin.Log.LogDebug($"Stack trace: {e.StackTrace}");
             }
         }
     }

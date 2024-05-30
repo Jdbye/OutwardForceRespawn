@@ -1,6 +1,6 @@
 {
     "name": "ForceRespawn",
-    "version_number": "1.0.0",
+    "version_number": "1.1.0",
     "website_url": "https://github.com/Jdbye/OutwardForceRespawn",
     "description": "Enables respawning (map reload) from the pause menu, as well as fixing a rare inventory stack bug.",
     "dependencies": [
